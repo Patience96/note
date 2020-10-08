@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <form class="center-block ">
+                    <div class="form-group">
+                        <label for="">用户名</label>
+                        <input type="text" name="username" class="form-control" id="username" placeholder="输入您的用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password-Repeat</label>
+                        <input type="password" class="form-control" id="rePassword" placeholder="重复密码">
+                    </div>
+                    <button  type="button" id="regist_btn" class="center-block btn btn-default">注册</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body" id="myModalContent">
+              我是一个模态框
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="sea.js"></script>
+    <script src="/web/js/seajs-css.js"></script>
+    <script src="/web/js/seajs-preload.js"></script>
+    <script>
+        // 预加载 
+        seajs.config({
+            preload: ["/web/js/jquery.min.js", "/web/js/bootstrap.min.js"]
+        });
+
+        // 加载入口模块
+        seajs.use("/web/modules/regist/main.js", function() {
+
+        });
+    </script>
+</body>
+</html>
